@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrategia de Captación de Propietarios para Parkao</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+            /* Add padding to the top of the body if a fixed header is ever re-introduced,
+               to prevent content from being obscured. For example:
+               padding-top: 80px; /* Adjust based on actual header height */
+            */
+        }
+        .collapsible-content {
+            display: none;
+            transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+            overflow: hidden;
+            max-height: 0;
+            opacity: 0;
+        }
+        .collapsible-content.open {
+            display: block;
+            max-height: 5000px; /* Ajusta según el contenido máximo esperado */
+            opacity: 1;
+        }
+        .section-main-title { /* Estilo para los títulos principales de Paso N */
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .subsection-title { /* Estilo para los subtítulos dentro de Marketing Digital */
+            cursor: pointer;
+            font-weight: 600;
+            color: #3b82f6; /* Tailwind blue-500 */
+            margin-top: 1rem;
+            padding: 0.5rem;
+            background-color: #eff6ff; /* Tailwind blue-50 */
+            border-radius: 0.375rem;
+            border-left: 4px solid #3b82f6; /* Tailwind blue-500 */
+        }
+        .subsection-title:hover {
+            background-color: #dbeafe; /* Tailwind blue-100 */
+        }
+        .arrow-indicator {
+            transition: transform 0.3s ease;
+        }
+        .arrow-indicator.open {
+            transform: rotate(90deg);
+        }
+        /* Estilos adicionales para mejorar la apariencia */
+        h1, h2, h3 {
+            color: #1a202c; /* Tailwind gray-900 */
+        }
+        h2.main-section-heading { /* Para los H2 de Paso N */
+            border-bottom: 2px solid #4a5568; /* Tailwind gray-600 */
+            padding-bottom: 0.5rem;
+            margin-top: 1.5rem;
+        }
+        h3.sub-item-heading { /* Para los H3 dentro de los desplegables de Marketing Digital */
+            color: #2d3748; /* Tailwind gray-700 */
+            margin-top: 1rem;
+            font-size: 1.125rem; /* text-lg */
+            font-weight: 600; /* semibold */
+        }
+        .card {
+            background-color: white;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .table-container {
+            overflow-x: auto; /* Para tablas anchas en móviles */
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid #e2e8f0; /* Tailwind gray-300 */
+            padding: 0.75rem;
+            text-align: left;
+        }
+        th {
+            background-color: #f7fafc; /* Tailwind gray-100 */
+        }
+        .cta-button {
+            background-color: #3b82f6; /* Tailwind blue-500 */
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 0.375rem;
+            text-decoration: none;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+        .cta-button:hover {
+            background-color: #2563eb; /* Tailwind blue-600 */
+        }
+        .badge {
+            display: inline-block;
+            padding: 0.25em 0.6em;
+            font-size: 75%;
+            font-weight: 700;
+            line-height: 1;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: baseline;
+            border-radius: 0.375rem;
+        }
+        .badge-blue {
+            color: #fff;
+            background-color: #3b82f6; /* blue-500 */
+        }
+        .badge-green {
+            color: #fff;
+            background-color: #10b981; /* green-500 */
+        }
+        .badge-yellow {
+            color: #fff;
+            background-color: #f59e0b; /* yellow-500 */
+        }
+        .list-disc {
+            list-style-type: disc;
+            margin-left: 1.5rem;
+        }
+        .list-circle {
+            list-style-type: circle;
+            margin-left: 1.5rem;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- Cabecera actualizada con fondo azul cielo y texto blanco asegurado -->
+    <header class="bg-sky-700 text-white p-6 shadow-md">
+        <div class="container mx-auto">
+            <h1 class="text-3xl font-bold text-center text-white">Estrategia de Captación de Propietarios para Parkao</h1>
+        </div>
+    </header>
+
+    <main class="container mx-auto p-4 md:p-6">
+
+        <div class="card">
+            <h2 class="text-2xl font-semibold mb-3">Resumen Estratégico de la Situación</h2>
+            <p class="mb-2">El mercado español presenta una clara necesidad de soluciones de aparcamiento innovadoras. Ciudades como Barcelona, Madrid, Sevilla y Valencia sufren alta dificultad para aparcar, mientras que Vigo y Murcia tienen una enorme densidad vehicular.</p>
+            <p class="mb-2">Esto, sumado a la subutilización de parkings privados y subterráneos, crea una oportunidad dorada para Parkao. La clave es comunicar eficazmente cómo Parkao transforma un espacio vacío en una fuente de ingresos constante y sin complicaciones.</p>
+            <p>Nos inspiraremos en modelos de éxito como Parkfy y Airbnb, priorizando la simplicidad, la confianza y el beneficio económico tangible para el propietario.</p>
+        </div>
+
+        <div class="card">
+            <h2 class="text-2xl font-semibold mb-3">Objetivo Principal de esta Etapa</h2>
+            <p>Captar una masa crítica inicial de dueños de parkings (particulares, inmobiliarias y administradores de fincas) para que publiquen sus espacios en Parkao, enfocándonos inicialmente en ciudades con alta demanda y dificultad de aparcamiento.</p>
+        </div>
+
+        <div class="card">
+            <h2 class="text-2xl font-semibold mb-3 section-main-title main-section-heading" onclick="toggleMainCollapse('paso1', this)">
+                Paso 1: Segmentación y Perfiles de Cliente Ideal (ICP)
+                <span class="arrow-indicator text-blue-500 text-xl transform transition-transform duration-300">&#x276F;</span>
+            </h2>
+            <div id="paso1" class="collapsible-content">
+                <p class="mb-4 mt-3">Es crucial diferenciar nuestros mensajes y canales según el tipo de propietario:</p>
+                
+                <div class="mb-6 p-4 border-l-4 border-blue-500 bg-blue-50 rounded-r-lg">
+                    <h3 class="text-xl font-semibold mb-2 text-blue-700">1. Dueños Particulares de Parkings</h3>
+                    <p><strong class="font-medium">Perfil:</strong> Personas con una o varias plazas de parking (en su residencia, segunda vivienda, heredadas) que están vacías la mayor parte del tiempo o en horarios específicos. Buscan ingresos extra con mínimo esfuerzo y control sobre su propiedad.</p>
+                    <p><strong class="font-medium">Necesidades/Dolores:</strong> Plaza infrautilizada, gastos asociados (comunidad, IBI), desconocimiento sobre cómo rentabilizarla de forma segura y flexible.</p>
+                    <p class="mt-2 p-3 bg-blue-100 rounded-md"><strong class="font-medium text-blue-800">Mensaje Clave Parkao:</strong> "Convierte tu plaza de parking vacía en hasta 300€ al mes. Tú eliges cuándo y cómo, Parkao se encarga del resto. ¡Fácil, seguro y rentable!"</p>
+                </div>
+
+                <div class="mb-6 p-4 border-l-4 border-green-500 bg-green-50 rounded-r-lg">
+                    <h3 class="text-xl font-semibold mb-2 text-green-700">2. Inmobiliarias</h3>
+                    <p><strong class="font-medium">Perfil:</strong> Agencias inmobiliarias que gestionan alquileres y ventas de inmuebles, incluyendo plazas de parking. Buscan ofrecer servicios de valor añadido a sus clientes y nuevas vías de ingresos.</p>
+                    <p><strong class="font-medium">Necesidades/Dolores:</strong> Plazas de parking de clientes que tardan en alquilarse/venderse, dificultad para ofrecer soluciones de rentabilidad a corto plazo para parkings, gestión adicional.</p>
+                    <p class="mt-2 p-3 bg-green-100 rounded-md"><strong class="font-medium text-green-800">Mensaje Clave Parkao:</strong> "Ofrece a tus clientes ingresos extra inmediatos por sus plazas de parking vacías. Colabora con Parkao: publicación gratuita, pagos garantizados y más valor para tus servicios."</p>
+                </div>
+
+                <div class="p-4 border-l-4 border-yellow-500 bg-yellow-50 rounded-r-lg">
+                    <h3 class="text-xl font-semibold mb-2 text-yellow-700">3. Administradores de Fincas</h3>
+                    <p><strong class="font-medium">Perfil:</strong> Profesionales o empresas que gestionan comunidades de propietarios, incluyendo los parkings comunitarios o plazas de propietarios individuales dentro de esas comunidades. Buscan optimizar los activos de la comunidad y ofrecer soluciones a los vecinos.</p>
+                    <p><strong class="font-medium">Necesidades/Dolores:</strong> Plazas de garaje comunitarias vacías o infrautilizadas, gestión de conflictos por aparcamiento, búsqueda de ingresos extra para la comunidad o para los propietarios.</p>
+                    <p class="mt-2 p-3 bg-yellow-100 rounded-md"><strong class="font-medium text-yellow-800">Mensaje Clave Parkao:</strong> "Rentabiliza las plazas de parking vacías en las comunidades que administras. Parkao facilita ingresos adicionales para la comunidad o los propietarios, sin complicaciones y con total transparencia."</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2 class="text-2xl font-semibold mb-3 section-main-title main-section-heading" onclick="toggleMainCollapse('paso2', this)">
+                Paso 2: Estrategias de Marketing y Captación (Online y Offline)
+                <span class="arrow-indicator text-blue-500 text-xl transform transition-transform duration-300">&#x276F;</span>
+            </h2>
+            <div id="paso2" class="collapsible-content">
+                <p class="mb-4 mt-3">Combinaremos acciones para alcanzar a cada segmento:</p>
+
+                <div class="mb-6 p-4 border-t-2 border-gray-300 pt-4">
+                    <h3 class="text-xl font-semibold mb-2 sub-item-heading">A. Propuesta de Valor Central (Transversal a todos los segmentos)</h3>
+                    <p class="mb-3">Estos puntos deben ser la base de toda nuestra comunicación:</p>
+                    <ul class="list-disc ml-6 space-y-1">
+                        <li><strong class="font-medium">Monetización Sencilla:</strong> Énfasis en los ingresos potenciales (ej. "hasta 300€/mes" o "70-100€/semana").</li>
+                        <li><strong class="font-medium">Flexibilidad y Control Total:</strong> El propietario decide horarios, días y precios.</li>
+                        <li><strong class="font-medium">Proceso de Alta Simple y Rápido:</strong> "Publica gratis en menos de 5 minutos".</li>
+                        <li><strong class="font-medium">Seguridad y Confianza:</strong> Pagos garantizados, soporte, verificación de usuarios.</li>
+                        <li><strong class="font-medium">Beneficio Adicional (Opcional):</strong> Contribución a mejorar la movilidad urbana.</li>
+                    </ul>
+                </div>
+                
+                <div class="mb-6 p-4 border-t-2 border-gray-300 pt-4">
+                    <h3 class="text-xl font-semibold mb-2 sub-item-heading">B. Marketing Digital</h3>
+                    <!-- Contenido de Marketing Digital Detallado -->
+                    <div id="marketing-digital-detallado">
+                        
+                        <div class="subsection-title" onclick="toggleSubCollapse('md-landing-pages', this)">
+                            1. Desarrollo de Landing Pages Específicas
+                            <span class="arrow-indicator text-blue-500 text-lg float-right transform transition-transform duration-300">&#x276F;</span>
+                        </div>
+                        <div id="md-landing-pages" class="collapsible-content ml-4 p-3 bg-white rounded-b-lg shadow">
+                            <p class="mb-2">El objetivo general de cualquier landing page es la conversión. Para nosotros, esto significa que el visitante realice una acción específica que lo acerque a publicar su parking en Parkao.</p>
+                            
+                            <h4 class="font-semibold text-lg mt-3 mb-1 text-gray-700">1.1 Landing Page para Dueños Particulares de Parkings</h4>
+                            <p><strong class="font-medium">Objetivo Principal:</strong> Que el dueño particular registre su plaza de parking en la plataforma Parkao.</p>
+                            <p><strong class="font-medium">Estilo y Tono:</strong> Cercano, claro, persuasivo, enfocado en los beneficios directos y la facilidad. Inspirar confianza y mostrar que es una decisión inteligente y sencilla.</p>
+                            <p class="font-medium mt-2">Elementos Clave y Contenido:</p>
+                            <ul class="list-disc space-y-1 mt-1">
+                                <li><strong class="text-gray-600">Título Principal (H1) Impactante:</strong> Ejemplo: "¿Tu Plaza de Parking Acumula Polvo? ¡Mejor que Acumule Dinero! Gana hasta 300€/mes con Parkao."</li>
+                                <li><strong class="text-gray-600">Subtítulo Persuasivo:</strong> Ejemplo: "Únete a Parkao gratis en menos de 5 minutos. Tú decides el horario, nosotros te conectamos con conductores. ¡Así de fácil!"</li>
+                                <li><strong class="text-gray-600">Imagen/Vídeo Hero de Alta Calidad:</strong> Mostrar una plaza bien iluminada o un vídeo corto explicando el proceso.</li>
+                                <li><strong class="text-gray-600">Sección "El Problema / Tu Oportunidad":</strong> Conectar con su situación y destacar la oportunidad de monetización.</li>
+                                <li><strong class="text-gray-600">Cómo Funciona en 3 Simples Pasos (Visual):</strong> 1. Publica Gratis. 2. Recibe Solicitudes. 3. Gana Dinero.</li>
+                                <li><strong class="text-gray-600">Beneficios Clave Detallados:</strong> Ingresos Extra, Flexibilidad Total, Seguridad y Confianza, Gestión Sencilla, Comunidad.</li>
+                                <li><strong class="text-gray-600">Calculadora de Ingresos Estimados:</strong> Permitir al usuario introducir datos y ver un ingreso estimado.</li>
+                                <li><strong class="text-gray-600">Testimonios (Cuando se tengan):</strong> Ejemplo: "Juan P. de [Ciudad]: 'No usaba mi plaza entre semana y ahora saco 120€ al mes...'"</li>
+                                <li><strong class="text-gray-600">Preguntas Frecuentes (FAQ):</strong> ¿Es seguro? ¿Cómo cobro? ¿Coste? etc.</li>
+                                <li><strong class="text-gray-600">Llamada a la Acción (CTA) Clara y Visible:</strong> Botones: "Publica tu Plaza GRATIS Ahora", "Empieza a Ganar con Parkao".</li>
+                            </ul>
+
+                            <h4 class="font-semibold text-lg mt-4 mb-1 text-gray-700">1.2 Landing Page para Inmobiliarias y Administradores de Fincas (B2B)</h4>
+                            <p><strong class="font-medium">Objetivo Principal:</strong> Que el representante solicite una demostración o llamada.</p>
+                            <p><strong class="font-medium">Estilo y Tono:</strong> Profesional, directo, centrado en la propuesta de valor para su negocio. Parkao como socio estratégico.</p>
+                             <p class="font-medium mt-2">Elementos Clave y Contenido:</p>
+                            <ul class="list-disc space-y-1 mt-1">
+                                <li><strong class="text-gray-600">Título Principal (H1) Enfocado al Beneficio B2B:</strong> Ejemplo: "Colabora con Parkao: Nuevos Ingresos para tus Clientes y Más Valor para tu Gestión..."</li>
+                                <li><strong class="text-gray-600">Subtítulo Específico:</strong> Ejemplo: "Ayuda a tus clientes a monetizar sus plazas vacías sin esfuerzo adicional para ti..."</li>
+                                <li><strong class="text-gray-600">Imagen/Vídeo Hero Profesional:</strong> Profesional cerrando un trato o infografía elegante.</li>
+                                <li><strong class="text-gray-600">Sección "¿Por qué colaborar con Parkao? (Beneficios para TI)":</strong> Nuevas Fuentes de Ingresos, Servicio de Valor Añadido, Cero Complicaciones, Mejora Satisfacción Cliente, Acceso a Red Creciente.</li>
+                                <li><strong class="text-gray-600">Cómo Funciona la Colaboración (Simplificado):</strong> 1. Contacta. 2. Identifica Plazas. 3. Genera Ingresos.</li>
+                                <li><strong class="text-gray-600">Beneficios para TUS Clientes (Propietarios):</strong> Reiterar beneficios de la landing de particulares.</li>
+                                <li><strong class="text-gray-600">Modelo de Colaboración (Opciones):</strong> Referidos, Gestión directa, Acuerdos marco. Flexible y adaptable.</li>
+                                <li><strong class="text-gray-600">Casos de Éxito o Ejemplos (Hipotéticos iniciales):</strong> "La Inmobiliaria XYZ incrementó satisfacción...", "La Comunidad ABC genera Y€ trimestrales..."</li>
+                                <li><strong class="text-gray-600">Logos de Confianza (Si aplica).</strong></li>
+                                <li><strong class="text-gray-600">Llamada a la Acción (CTA) Específica para B2B:</strong> Botones: "Agendar una Demo Gratuita", "Hablemos de Colaboración". Formulario de contacto breve.</li>
+                            </ul>
+
+                            <h4 class="font-semibold text-lg mt-4 mb-1 text-gray-700">1.3 Herramientas Sugeridas para Landing Pages (Recordatorio)</h4>
+                            <ul class="list-disc space-y-1 mt-1">
+                                <li><strong class="text-gray-600">MVPs y primeras pruebas:</strong> Carrd.co, Leadpages, Unbounce, Instapage, constructores de landing pages en plataformas de email marketing (Mailchimp, ConvertKit), Notion + Simple.ink/Potion.so.</li>
+                                <li><strong class="text-gray-600">Mayor escalabilidad y SEO:</strong> Webflow, WordPress + Constructor Visual (Elementor, Beaver Builder).</li>
+                            </ul>
+
+                            <h4 class="font-semibold text-lg mt-4 mb-1 text-gray-700">1.4 Consideraciones Clave para la Conversión en AMBAS Landing Pages</h4>
+                            <ul class="list-disc space-y-1 mt-1">
+                                <li>Claridad Absoluta, Diseño Limpio y Profesional, Enfoque en el Beneficio (WIIFM).</li>
+                                <li>Prueba Social, Mínima Fricción, Adaptabilidad Móvil (Responsive).</li>
+                                <li>Velocidad de Carga Rápida, Un Único Objetivo por Landing, A/B Testing.</li>
+                            </ul>
+                        </div>
+
+                        <div class="subsection-title" onclick="toggleSubCollapse('md-seo-local', this)">
+                            2. SEO Local (Optimización para Motores de Búsqueda Local)
+                            <span class="arrow-indicator text-blue-500 text-lg float-right transform transition-transform duration-300">&#x276F;</span>
+                        </div>
+                        <div id="md-seo-local" class="collapsible-content ml-4 p-3 bg-white rounded-b-lg shadow">
+                            <p><strong class="font-medium">Objetivo:</strong> Asegurar que Parkao aparezca en primeras posiciones de Google cuando propietarios busquen localmente cómo rentabilizar sus parkings.</p>
+                            <p><strong class="font-medium">Público Principal:</strong> Dueños particulares buscando activamente.</p>
+                            <p class="font-medium mt-2">Acciones Clave:</p>
+                            <ul class="list-disc space-y-1 mt-1">
+                                <li><strong class="text-gray-600">Optimización de Google Business Profile (GBP):</strong> Crear/verificar perfil, completar info, subir fotos, animar reseñas, publicar novedades.</li>
+                                <li><strong class="text-gray-600">Investigación de Palabras Clave Locales:</strong> "alquilar mi parking en [ciudad/barrio]", "ganar dinero con plaza de garaje [ciudad]".</li>
+                                <li><strong class="text-gray-600">Optimización On-Page Local:</strong> Incluir palabras clave en títulos, meta descripciones, contenido, ALT de imágenes. Crear contenido específico para ciudades/barrios.</li>
+                                <li><strong class="text-gray-600">Citas Locales (Local Citations):</strong> Alta en directorios online (Páginas Amarillas, Yelp) con NAP consistente.</li>
+                                <li><strong class="text-gray-600">Generación de Contenido Localizado:</strong> Artículos sobre problemas de aparcamiento o monetización en ciudades específicas.</li>
+                            </ul>
+                            <p class="font-medium mt-2">Herramientas Sugeridas:</p>
+                            <ul class="list-disc space-y-1 mt-1">
+                                <li>Google Business Profile, Google Keyword Planner, SEMrush, Ahrefs, Ubersuggest.</li>
+                            </ul>
+                            <p class="font-medium mt-2">Métricas de Éxito:</p>
+                            <ul class="list-disc space-y-1 mt-1">
+                                <li>Ranking en Google para palabras clave locales, tráfico orgánico local, clics/llamadas desde GBP, conversiones desde tráfico orgánico local.</li>
+                            </ul>
+                        </div>
+
+                        <div class="subsection-title" onclick="toggleSubCollapse('md-google-ads', this)">
+                            3. Google Ads Geolocalizados
+                             <span class="arrow-indicator text-blue-500 text-lg float-right transform transition-transform duration-300">&#x276F;</span>
+                        </div>
+                        <div id="md-google-ads" class="collapsible-content ml-4 p-3 bg-white rounded-b-lg shadow">
+                            <p><strong class="font-medium">Objetivo:</strong> Captar atención de propietarios buscando activamente soluciones en ubicaciones específicas.</p>
+                            <p><strong class="font-medium">Público Principal:</strong> Dueños particulares, inmobiliarias/administradores (campañas diferenciadas).</p>
+                             <p class="font-medium mt-2">Acciones Clave:</p>
+                            <ul class="list-disc space-y-1 mt-1">
+                                <li><strong class="text-gray-600">Campañas de Búsqueda:</strong> Usar palabras clave SEO, grupos de anuncios específicos por intención y tipo de propietario.</li>
+                                <li><strong class="text-gray-600">Geo-segmentación Precisa:</strong> Enfocar en ciudades con alta dificultad/densidad (Barcelona, Madrid, Vigo, etc.) e incluso barrios.</li>
+                                <li><strong class="text-gray-600">Redacción de Anuncios Convincentes:</strong> Titulares con palabra clave y beneficio. Descripciones con facilidad, seguridad, control. Extensiones de anuncio.</li>
+                                <li><strong class="text-gray-600">Vinculación a Landing Pages Específicas.</strong></li>
+                                <li><strong class="text-gray-600">Campañas de Display (Opcional):</strong> Remarketing o awareness a audiencias con intereses relevantes.</li>
+                                <li><strong class="text-gray-600">Optimización Continua:</strong> Monitorizar rendimiento, ajustar pujas, negativas, creatividades.</li>
+                            </ul>
+                            <p class="font-medium mt-2">Herramientas Sugeridas:</p>
+                            <ul class="list-disc space-y-1 mt-1">
+                                <li>Google Ads Platform, Google Analytics.</li>
+                            </ul>
+                            <p class="font-medium mt-2">Métricas de Éxito:</p>
+                            <ul class="list-disc space-y-1 mt-1">
+                                <li>CTR, Tasa de Conversión, Coste por Adquisición (CAP), ROAS.</li>
+                            </ul>
+                        </div>
+
+                        <div class="subsection-title" onclick="toggleSubCollapse('md-social-ads', this)">
+                            4. Publicidad en Redes Sociales (Facebook/Instagram Ads)
+                             <span class="arrow-indicator text-blue-500 text-lg float-right transform transition-transform duration-300">&#x276F;</span>
+                        </div>
+                        <div id="md-social-ads" class="collapsible-content ml-4 p-3 bg-white rounded-b-lg shadow">
+                            <p><strong class="font-medium">Objetivo:</strong> Alcanzar propietarios (incluso no buscando activamente) en redes sociales, generando interés.</p>
+                            <p><strong class="font-medium">Público Principal:</strong> Dueños particulares. Secundariamente, profesionales inmobiliarios.</p>
+                            <p class="font-medium mt-2">Acciones Clave:</p>
+                            <ul class="list-disc space-y-1 mt-1">
+                                <li><strong class="text-gray-600">Segmentación Detallada:</strong> Particulares (ubicación, edad, intereses como inversión inmobiliaria, economía colaborativa). Inmobiliarias/Admin (cargo, intereses sectoriales).</li>
+                                <li><strong class="text-gray-600">Contenido Visual Atractivo:</strong> Imágenes/vídeos mostrando beneficio de Parkao (parking vacío -> dinero, facilidad app). Mensaje "Gana hasta 300 euros/mes". Hashtags.</li>
+                                <li><strong class="text-gray-600">Formatos Variados:</strong> Imagen única, carrusel, vídeo, Lead Ads (para B2B).</li>
+                                <li><strong class="text-gray-600">Textos Persuasivos:</strong> Enfocados en beneficio, lenguaje adaptado a red social. CTAs claros.</li>
+                                <li><strong class="text-gray-600">Retargeting:</strong> A visitantes de web/landing que no convirtieron.</li>
+                                <li><strong class="text-gray-600">Pruebas A/B:</strong> Testear creatividades, públicos, textos.</li>
+                            </ul>
+                             <p class="font-medium mt-2">Herramientas Sugeridas:</p>
+                            <ul class="list-disc space-y-1 mt-1">
+                                <li>Facebook Ads Manager, Canva, CapCut.</li>
+                            </ul>
+                            <p class="font-medium mt-2">Métricas de Éxito:</p>
+                            <ul class="list-disc space-y-1 mt-1">
+                                <li>Alcance, Impresiones, CTR, CPC, Tasa de Conversión, CAP, Engagement.</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="subsection-title" onclick="toggleSubCollapse('md-email-marketing', this)">
+                           5. Email Marketing Directo (a Inmobiliarias y Administradores)
+                            <span class="arrow-indicator text-blue-500 text-lg float-right transform transition-transform duration-300">&#x276F;</span>
+                        </div>
+                        <div id="md-email-marketing" class="collapsible-content ml-4 p-3 bg-white rounded-b-lg shadow">
+                            <p><strong class="font-medium">Objetivo:</strong> Establecer contacto profesional, presentar propuesta de valor B2B, conseguir reunión/demo.</p>
+                            <p><strong class="font-medium">Público Principal:</strong> Inmobiliarias y Administradores identificados.</p>
+                            <p class="font-medium mt-2">Acciones Clave:</p>
+                            <ul class="list-disc space-y-1 mt-1">
+                                <li><strong class="text-gray-600">Segmentación de Lista:</strong> Por ciudad, tamaño empresa, servicios de garaje.</li>
+                                <li><strong class="text-gray-600">Diseño de Secuencia de Emails:</strong>
+                                    <ul class="list-circle ml-4">
+                                        <li>Email 1 (Introducción y Valor): Asunto "Colaboración Parkao: Ingresos extra...", cuerpo breve, personalizado, beneficio para ellos y clientes, enlace a landing B2B. CTA: "¿Llamada de 10 min?".</li>
+                                        <li>Email 2 (Recordatorio + Caso Uso): 3-5 días después. Asunto "Re: Colaboración Parkao", recordar propuesta, dato interés/caso uso. CTA: "Agende demo: [Calendly]".</li>
+                                        <li>Email 3 (Último Intento / Recurso): 5-7 días después. Asunto "Info final...", muy breve, ofrecer PDF detallado. CTA: "Descargue dossier" o "Aquí estamos".</li>
+                                    </ul>
+                                </li>
+                                <li><strong class="text-gray-600">Personalización:</strong> Nombre empresa/contacto, algo específico de su web.</li>
+                                <li><strong class="text-gray-600">Cumplimiento Normativo (RGPD/LOPD):</strong> Origen lícito, opción de baja.</li>
+                            </ul>
+                            <p class="font-medium mt-2">Herramientas Sugeridas:</p>
+                            <ul class="list-disc space-y-1 mt-1">
+                                <li>Mailchimp, Sendinblue, HubSpot Sales Hub, Apollo.io. CRM. Calendly.</li>
+                            </ul>
+                            <p class="font-medium mt-2">Métricas de Éxito:</p>
+                            <ul class="list-disc space-y-1 mt-1">
+                                <li>Tasa Apertura, CTR, Tasa Respuesta, Demos/Llamadas Agendadas, Conversión Lead a Partner.</li>
+                            </ul>
+                        </div>
+
+                        <div class="subsection-title" onclick="toggleSubCollapse('md-content-marketing', this)">
+                            6. Marketing de Contenidos (Inbound)
+                            <span class="arrow-indicator text-blue-500 text-lg float-right transform transition-transform duration-300">&#x276F;</span>
+                        </div>
+                        <div id="md-content-marketing" class="collapsible-content ml-4 p-3 bg-white rounded-b-lg shadow">
+                            <p><strong class="font-medium">Objetivo:</strong> Atraer propietarios orgánicamente, educándolos, construyendo confianza y posicionando Parkao como experto. Apoya SEO.</p>
+                            <p><strong class="font-medium">Público Principal:</strong> Dueños particulares. Secundariamente, profesionales sector.</p>
+                            <p class="font-medium mt-2">Acciones Clave:</p>
+                            <ul class="list-disc space-y-1 mt-1">
+                                <li><strong class="text-gray-600">Creación de Blog en Web Parkao.</strong></li>
+                                <li><strong class="text-gray-600">Planificación de Contenidos (Calendario Editorial):</strong> Basado en palabras clave y FAQs.</li>
+                                <li><strong class="text-gray-600">Categorías de Contenido:</strong> Guías Prácticas ("Cómo poner tu plaza en alquiler"), Beneficios/Oportunidades ("5 razones para alquilar"), Noticias/Tendencias ("Futuro parking urbano"), Casos Éxito/Testimonios.</li>
+                                <li><strong class="text-gray-600">Formatos Variados:</strong> Artículos, infografías, vídeos cortos, checklists.</li>
+                                <li><strong class="text-gray-600">Optimización SEO de cada Contenido.</strong></li>
+                                <li><strong class="text-gray-600">Promoción:</strong> Redes sociales, newsletters, guest posting.</li>
+                            </ul>
+                            <p class="font-medium mt-2">Herramientas Sugeridas:</p>
+                            <ul class="list-disc space-y-1 mt-1">
+                                <li>Plataforma blog, Google Docs/Notion, Canva, AnswerThePublic, Google Trends, Herramientas SEO.</li>
+                            </ul>
+                            <p class="font-medium mt-2">Métricas de Éxito:</p>
+                            <ul class="list-disc space-y-1 mt-1">
+                                <li>Tráfico orgánico, tiempo permanencia, palabras clave posicionadas, leads generados, shares/engagement.</li>
+                            </ul>
+                        </div>
+
+                        <div class="subsection-title" onclick="toggleSubCollapse('md-digital-alliances', this)">
+                            7. Alianzas Digitales
+                             <span class="arrow-indicator text-blue-500 text-lg float-right transform transition-transform duration-300">&#x276F;</span>
+                        </div>
+                        <div id="md-digital-alliances" class="collapsible-content ml-4 p-3 bg-white rounded-b-lg shadow">
+                            <p><strong class="font-medium">Objetivo:</strong> Llegar a nuevas audiencias de propietarios colaborando con plataformas/empresas/comunidades online afines.</p>
+                            <p><strong class="font-medium">Público Principal:</strong> Todos los segmentos, según aliado.</p>
+                            <p class="font-medium mt-2">Acciones Clave:</p>
+                            <ul class="list-disc space-y-1 mt-1">
+                                <li><strong class="text-gray-600">Identificación de Posibles Aliados:</strong> Blogs locales/inmobiliarios, foros comunidades, grupos Facebook/LinkedIn, apps complementarias, pequeños portales inmobiliarios.</li>
+                                <li><strong class="text-gray-600">Propuesta de Valor para Aliado:</strong> Contenido valor, comisión referido, promoción cruzada, beneficio exclusivo para sus usuarios.</li>
+                                <li><strong class="text-gray-600">Tipos de Colaboración:</strong> Guest Blogging, Webinars Conjuntos, Menciones Newsletters/Redes, Programas Afiliados.</li>
+                                <li><strong class="text-gray-600">Contacto y Negociación:</strong> Pitch claro y conciso.</li>
+                            </ul>
+                            <p class="font-medium mt-2">Herramientas Sugeridas:</p>
+                            <ul class="list-disc space-y-1 mt-1">
+                                <li>LinkedIn Sales Navigator, Hunter.io. CRM.</li>
+                            </ul>
+                            <p class="font-medium mt-2">Métricas de Éxito:</p>
+                            <ul class="list-disc space-y-1 mt-1">
+                                <li>Número alianzas, tráfico referido, propietarios captados por alianza, CPA.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Fin Contenido de Marketing Digital Detallado -->
+                </div>
+
+                <div class="p-4 border-t-2 border-gray-300 pt-4">
+                    <h3 class="text-xl font-semibold mb-2 sub-item-heading">C. Marketing Offline y Directo</h3>
+                     <div class="table-container">
+                        <table class="w-full text-sm">
+                            <thead class="bg-gray-200">
+                                <tr>
+                                    <th class="px-4 py-2">Acción</th>
+                                    <th class="px-4 py-2">Descripción</th>
+                                    <th class="px-4 py-2">Segmento Principal</th>
+                                    <th class="px-4 py-2">Materiales / Recursos</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="border px-4 py-2 font-medium">Flyers y Buzoneo</td>
+                                    <td class="border px-4 py-2">Repartir flyers en edificios residenciales en zonas con alta demanda de parking y/o baja oferta.</td>
+                                    <td class="border px-4 py-2"><span class="badge badge-blue">Dueños Particulares</span></td>
+                                    <td class="border px-4 py-2">Flyers impresos, segmentación por códigos postales.</td>
+                                </tr>
+                                <tr>
+                                    <td class="border px-4 py-2 font-medium">Colaboración con Administradores de Fincas</td>
+                                    <td class="border px-4 py-2">Contacto directo (email, llamada, visita) para presentar Parkao como solución para rentabilizar plazas.</td>
+                                    <td class="border px-4 py-2"><span class="badge badge-yellow">Admin. de Fincas</span></td>
+                                    <td class="border px-4 py-2">Email personalizado, PDF informativo, script de llamada.</td>
+                                </tr>
+                                <tr>
+                                    <td class="border px-4 py-2 font-medium">Contacto con Inmobiliarias</td>
+                                    <td class="border px-4 py-2">Similar a administradores, destacando el valor añadido para sus clientes y la posibilidad de ingresos por referidos/gestión.</td>
+                                    <td class="border px-4 py-2"><span class="badge badge-green">Inmobiliarias</span></td>
+                                    <td class="border px-4 py-2">Email personalizado, PDF informativo, script de llamada.</td>
+                                </tr>
+                                <tr>
+                                    <td class="border px-4 py-2 font-medium">Publicidad Local (Exterior)</td>
+                                    <td class="border px-4 py-2">Cartelería en puntos estratégicos (garajes públicos cercanos, comercios locales).</td>
+                                    <td class="border px-4 py-2"><span class="badge badge-blue">Dueños Particulares</span></td>
+                                    <td class="border px-4 py-2">Diseño en Canva, imprenta local.</td>
+                                </tr>
+                                <tr>
+                                    <td class="border px-4 py-2 font-medium">Eventos y Asociaciones Locales</td>
+                                    <td class="border px-4 py-2">Participar o patrocinar pequeños eventos vecinales, ferias locales. Contactar con asociaciones de propietarios o comerciantes.</td>
+                                    <td class="border px-4 py-2"><span class="badge badge-blue">Todos</span></td>
+                                    <td class="border px-4 py-2">Material promocional, presencia de marca.</td>
+                                </tr>
+                                 <tr>
+                                    <td class="border px-4 py-2 font-medium">Promociones de Lanzamiento / Programa de Referidos</td>
+                                    <td class="border px-4 py-2">Ofrecer bonos por alta o primeras reservas. Incentivar recomendaciones.</td>
+                                    <td class="border px-4 py-2"><span class="badge badge-blue">Todos</span></td>
+                                    <td class="border px-4 py-2">Definir presupuesto y mecánica. Definir recompensa.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2 class="text-2xl font-semibold mb-3 section-main-title main-section-heading" onclick="toggleMainCollapse('paso3', this)">
+                Paso 3: Materiales Clave de Conversión (Acciones Inmediatas)
+                <span class="arrow-indicator text-blue-500 text-xl transform transition-transform duration-300">&#x276F;</span>
+            </h2>
+            <div id="paso3" class="collapsible-content">
+                <p class="mb-4 mt-3">Basándonos en vuestros materiales existentes y las necesidades detectadas:</p>
+                <ul class="list-disc ml-6 space-y-3">
+                    <li>
+                        <strong class="font-medium">Landing Page para Dueños Particulares:</strong>
+                        <ul class="list-circle ml-6 mt-1 space-y-1 text-sm">
+                            <li>Título: "¿Plaza de parking vacía? ¡Conviértela en hasta 300€ al mes con Parkao!"</li>
+                            <li>Subtítulo: "Publica gratis en 3 minutos. Tú pones las reglas, nosotros los conductores."</li>
+                            <li>Beneficios Clave: Ingresos pasivos, flexibilidad, seguridad, fácil gestión, soporte.</li>
+                            <li>Calculadora de Ingresos Estimados.</li>
+                            <li>Testimonios (cuando se tengan).</li>
+                            <li>CTA: "Publica tu plaza GRATIS", "Empieza a ganar ahora".</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong class="font-medium">Landing Page para Inmobiliarias y Administradores de Fincas:</strong>
+                         <ul class="list-circle ml-6 mt-1 space-y-1 text-sm">
+                            <li>Título: "Genera Ingresos Adicionales para tus Clientes/Comunidades con Parkao."</li>
+                            <li>Subtítulo: "La solución inteligente para monetizar plazas de parking vacías."</li>
+                            <li>Beneficios Clave: Nueva fuente de ingresos, servicio de valor añadido, Parkao gestiona operativa, transparencia, posible comisión.</li>
+                            <li>Casos de Éxito (cuando se tengan).</li>
+                            <li>CTA: "Agenda una demo", "Descubre cómo colaborar".</li>
+                        </ul>
+                    </li>
+                    <li><strong class="font-medium">PDF Informativo para Inmobiliarias/Administradores:</strong> Extensión de la landing page B2B, con más detalle.</li>
+                    <li>
+                        <strong class="font-medium">Flyer (basado en el de Parkao):</strong>
+                        <ul class="list-circle ml-6 mt-1 space-y-1 text-sm">
+                            <li>Título: "¿Tienes una plaza de parking vacía?"</li>
+                            <li>Subtítulo: "Gana hasta 300€ al mes alquilándola con Parkao."</li>
+                            <li>Beneficios: "Sin complicaciones", "Pagos garantizados y soporte 24/7", "Publica gratis en menos de 5 minutos".</li>
+                            <li>CTA: "Regístrate gratis en www.parkao.com o escanea este QR". QR grande y funcional.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong class="font-medium">Plantillas de Email Marketing:</strong>
+                        <ul class="list-circle ml-6 mt-1 space-y-1 text-sm">
+                            <li>Para Inmobiliarias/Administradores: Asunto "Colaboración Parkao: Ingresos extra...", cuerpo personalizado, enlace a landing B2B/PDF.</li>
+                            <li>Flujo de Bienvenida para Nuevos Propietarios.</li>
+                            <li>Flujo de Reactivación para Propietarios Inactivos.</li>
+                        </ul>
+                    </li>
+                     <li>
+                        <strong class="font-medium">Scripts para WhatsApp Business y Llamadas:</strong>
+                        <ul class="list-circle ml-6 mt-1 space-y-1 text-sm">
+                            <li>Propietarios Particulares: Enfocado en facilidad e ingreso extra.</li>
+                            <li>Inmobiliarias/Administradores: Enfocado en oportunidad de negocio y servicio.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong class="font-medium">Contenido para Redes Sociales:</strong>
+                        <ul class="list-circle ml-6 mt-1 space-y-1 text-sm">
+                            <li>Posts: "¿Plaza vacía? Parkao la llena de ingresos", "Tu parking, tus reglas, tu dinero extra".</li>
+                            <li>Hashtags: #Parkao #ParkingInteligente #EconomiaColaborativa #[TuCiudad]Parking.</li>
+                            <li>Pequeños vídeos explicativos o testimonios.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2 class="text-2xl font-semibold mb-3 section-main-title main-section-heading" onclick="toggleMainCollapse('paso4', this)">
+                Paso 4: Selección de Canales de Adquisición por Contexto Urbano (Priorización)
+                <span class="arrow-indicator text-blue-500 text-xl transform transition-transform duration-300">&#x276F;</span>
+            </h2>
+            <div id="paso4" class="collapsible-content">
+                <p class="mb-4 mt-3">Dada la información sobre problemas de aparcamiento en España:</p>
+                <div class="mb-4 p-3 bg-gray-50 rounded-md">
+                    <h4 class="font-semibold text-lg">Ciudades con Alta Dificultad de Aparcamiento (Barcelona, Madrid, Sevilla, Valencia):</h4>
+                    <ul class="list-disc ml-5 mt-1 text-sm">
+                        <li><strong class="text-red-600">Prioridad Alta:</strong> Marketing digital muy segmentado (SEO local, Google Ads, Redes Sociales).</li>
+                        <li><strong class="text-red-600">Prioridad Alta:</strong> Contacto directo con Administradores e Inmobiliarias.</li>
+                        <li><strong class="text-yellow-600">Prioridad Media:</strong> Buzoneo de flyers en barrios céntricos.</li>
+                        <li>Mensaje Específico: "En [Ciudad], aparcar es un desafío. Tu plaza vacía es una mina de oro. ¡Réscatala con Parkao!"</li>
+                    </ul>
+                </div>
+                <div class="mb-4 p-3 bg-gray-50 rounded-md">
+                    <h4 class="font-semibold text-lg">Ciudades con Alta Densidad Vehicular (Vigo, Murcia):</h4>
+                     <ul class="list-disc ml-5 mt-1 text-sm">
+                        <li><strong class="text-red-600">Prioridad Alta:</strong> Flyers y buzoneo masivo, publicidad local.</li>
+                        <li><strong class="text-yellow-600">Prioridad Media:</strong> Marketing digital enfocado en la alta demanda general.</li>
+                        <li>Mensaje Específico: "Con tantos coches en [Ciudad], tu plaza de parking es más valiosa que nunca. ¡Monetízala fácilmente con Parkao!"</li>
+                    </ul>
+                </div>
+                 <div class="mb-4 p-3 bg-gray-50 rounded-md">
+                    <h4 class="font-semibold text-lg">Otras Ciudades con Alta Demanda (Granada, Bilbao, Cádiz, etc.):</h4>
+                    <p class="text-sm">Iniciar con enfoque mixto (B2B, SEO local), expandir a publicidad digital según resultados.</p>
+                </div>
+                <div class="p-3 bg-gray-50 rounded-md">
+                    <h4 class="font-semibold text-lg">Aeropuertos (Barcelona-El Prat, Madrid-Barajas, etc.):</h4>
+                    <p class="text-sm">Nicho interesante. Contactar propietarios en zonas aledañas. Marketing digital geolocalizado.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <h2 class="text-2xl font-semibold mb-3 section-main-title main-section-heading" onclick="toggleMainCollapse('paso5', this)">
+                Paso 5: Guía de Implementación y Herramientas
+                <span class="arrow-indicator text-blue-500 text-xl transform transition-transform duration-300">&#x276F;</span>
+            </h2>
+            <div id="paso5" class="collapsible-content">
+                <div class="mb-6 mt-3">
+                    <h3 class="text-xl font-semibold mb-2 sub-item-heading">Fase 1: Lanzamiento y Validación (Primeros 1-3 meses)</h3>
+                    <p><strong class="font-medium">Objetivo:</strong> Conseguir los primeros 50-100 parkings en 1-2 ciudades piloto (ej. Barcelona y/o Madrid).</p>
+                    <p class="mt-1"><strong class="font-medium">Acciones Clave:</strong></p>
+                    <ul class="list-decimal ml-6 mt-1 space-y-1 text-sm">
+                        <li>Desarrollar landing pages (particular y B2B) y PDF informativo B2B.</li>
+                        <li>Imprimir flyers.</li>
+                        <li>Crear lista de emails inicial de inmobiliarias y administradores.</li>
+                        <li>Lanzar campaña de email marketing y cold calling a B2B.</li>
+                        <li>Realizar buzoneo en barrios clave.</li>
+                        <li>Configurar perfiles en redes sociales y publicar contenido orgánico.</li>
+                    </ul>
+                    <p class="mt-2"><strong class="font-medium">Herramientas de Bajo Coste:</strong> Canva, Carrd/Unicorn Platform, Google Sheets, Mailchimp (gratuito), WhatsApp Business, Calendly.</p>
+                </div>
+
+                <div class="mb-6">
+                    <h3 class="text-xl font-semibold mb-2 sub-item-heading">Fase 2: Crecimiento y Optimización (Meses 4-12)</h3>
+                    <p><strong class="font-medium">Objetivo:</strong> Escalar la captación en ciudades piloto, expandir a 2-3 ciudades más. Optimizar embudos.</p>
+                     <p class="mt-1"><strong class="font-medium">Acciones Clave:</strong></p>
+                    <ul class="list-decimal ml-6 mt-1 space-y-1 text-sm">
+                        <li>Analizar resultados de Fase 1.</li>
+                        <li>Invertir en Google Ads y Facebook/Instagram Ads geolocalizados.</li>
+                        <li>Desarrollar contenido SEO (blog).</li>
+                        <li>Implementar programa de referidos.</li>
+                        <li>Buscar alianzas estratégicas más formales.</li>
+                    </ul>
+                    <p class="mt-2"><strong class="font-medium">Herramientas (Considerar inversión):</strong> Webflow/WordPress, HubSpot CRM/ActiveCampaign, Google Analytics, Herramientas SEO (Ubersuggest, Ahrefs).</p>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-semibold mb-2 sub-item-heading">Medición de Resultados y Ajuste</h3>
+                    <p><strong class="font-medium">KPIs (Indicadores Clave de Rendimiento):</strong></p>
+                    <ul class="list-disc ml-6 mt-1 space-y-1 text-sm">
+                        <li>Número de parkings listados (por semana/mes).</li>
+                        <li>Fuente de adquisición de cada parking.</li>
+                        <li>Coste de Adquisición por Parking (CAP).</li>
+                        <li>Tasa de conversión de las landing pages.</li>
+                        <li>Tasa de apertura y clics en campañas de email.</li>
+                    </ul>
+                    <p class="mt-2"><strong class="font-medium">Iteración:</strong> Revisar KPIs semanalmente/mensualmente. Ajustar o detener campañas no funcionales. Invertir más en canales efectivos. Escucha activa del feedback.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card text-center">
+             <p class="text-lg font-semibold">¡Este es un plan de acción sólido para empezar!</p>
+             <p class="mt-2">Estoy aquí para profundizar en cualquiera de estos puntos, ayudarte a crear esos materiales o responder cualquier pregunta.</p>
+             <p class="mt-4 font-bold text-xl text-blue-600">¡Vamos a llenar Parkao de parkings!</p>
+        </div>
+    </main>
+
+    <footer class="text-center p-6 bg-slate-800 text-gray-300 mt-8">
+        <p>&copy; <span id="currentYear"></span> Estrategia Parkao. Documento generado interactivamente.</p>
+    </footer>
+
+    <script>
+        // Función para los desplegables principales (Paso N)
+        function toggleMainCollapse(elementId, headerElement) {
+            const content = document.getElementById(elementId);
+            const arrow = headerElement.querySelector('.arrow-indicator');
+            if (content.classList.contains('open')) {
+                content.classList.remove('open');
+                arrow.classList.remove('open');
+            } else {
+                // Opcional: cerrar otros desplegables principales si se desea
+                // document.querySelectorAll('.collapsible-content.open').forEach(openContent => {
+                //     if(openContent.id !== elementId && openContent.id.startsWith('paso')) {
+                //        openContent.classList.remove('open');
+                //        openContent.previousElementSibling.querySelector('.arrow-indicator').classList.remove('open');
+                //     }
+                // });
+                content.classList.add('open');
+                arrow.classList.add('open');
+            }
+        }
+
+        // Función para los sub-desplegables (dentro de Marketing Digital)
+        function toggleSubCollapse(elementId, headerElement) {
+            const content = document.getElementById(elementId);
+            const arrow = headerElement.querySelector('.arrow-indicator');
+             if (content.classList.contains('open')) {
+                content.classList.remove('open');
+                if(arrow) arrow.classList.remove('open');
+            } else {
+                content.classList.add('open');
+                if(arrow) arrow.classList.add('open');
+            }
+        }
+        
+        // Establecer el año actual en el footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Opcional: Abrir todas las secciones principales por defecto o solo algunas
+        // document.addEventListener('DOMContentLoaded', () => {
+        //     toggleMainCollapse('paso1', document.querySelector('h2[onclick*="paso1"]')); 
+        //     toggleMainCollapse('paso2', document.querySelector('h2[onclick*="paso2"]')); 
+        //     // Para abrir un sub-desplegable específico por defecto:
+        //     // toggleSubCollapse('md-landing-pages', document.querySelector('.subsection-title[onclick*="md-landing-pages"]'));
+        // });
+    </script>
+
+</body>
+</html>
